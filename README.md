@@ -17,12 +17,12 @@ LoadingBar is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LoadingBar'
+pod 'LoadingBar', :git => 'https://github.com/iharkatkavets/ios.loading-bar.swift'
 ```
 
 ## Author
 
-Ihar Katkavets, iharkatkavets@users.noreply.github.com
+Ihar Katkavets, job4ihar@gmail.com
 
 ## License
 
