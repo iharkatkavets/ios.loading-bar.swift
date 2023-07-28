@@ -9,8 +9,8 @@ import Foundation
 
 final class TemplateImageBuilder {
     var size: CGSize?
-    var shapeColor: UIColor = .red
-    var backgroundColor: UIColor = .blue
+    var stripColor0: UIColor = .red
+    var stripColor1: UIColor = .blue
     var scale: CGFloat = 1
     
     public func withSize(_ size: CGSize) -> TemplateImageBuilder {
@@ -18,13 +18,13 @@ final class TemplateImageBuilder {
         return self
     }
     
-    public func withShapeColor(_ color: UIColor) -> TemplateImageBuilder {
-        shapeColor = color
+    public func withStripColor0(_ color: UIColor) -> TemplateImageBuilder {
+        stripColor0 = color
         return self
     }
     
-    public func withBackgroundColor(_ color: UIColor) -> TemplateImageBuilder {
-        backgroundColor = color
+    public func withStripColor1(_ color: UIColor) -> TemplateImageBuilder {
+        stripColor1 = color
         return self
     }
     
@@ -54,7 +54,7 @@ final class TemplateImageBuilder {
     
     private func fillBackground(_ bitmap: CGContext, _ rect: CGRect) {
         bitmap.addRect(rect)
-        bitmap.setFillColor(backgroundColor.cgColor)
+        bitmap.setFillColor(stripColor1.cgColor)
         bitmap.fill(rect)
     }
     
@@ -62,7 +62,7 @@ final class TemplateImageBuilder {
         bitmap.beginPath()
         bitmap.addRect(rect)
         bitmap.closePath()
-        bitmap.setFillColor(backgroundColor.cgColor)
+        bitmap.setFillColor(stripColor1.cgColor)
         bitmap.fill(rect)
         
         bitmap.beginPath()
@@ -70,7 +70,7 @@ final class TemplateImageBuilder {
         let y = rect.origin.y
         let width = rect.size.width/2
         let height = rect.size.height
-        bitmap.setFillColor(shapeColor.cgColor)
+        bitmap.setFillColor(stripColor0.cgColor)
         bitmap.move(to: CGPoint(x: x, y: y))
         bitmap.addLine(to: CGPoint(x: x+height, y: y+height))
         bitmap.addLine(to: CGPoint(x: x+width+height, y: y+height))

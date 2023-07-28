@@ -37,6 +37,27 @@
                                     <action selector="progressValueDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="N6z-mr-ekY"/>
                                 </connections>
                             </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="J23-4n-jVW">
+                                <rect key="frame" x="18" y="508" width="339" height="34.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWA-w0-z4z">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Animating"/>
+                                        <connections>
+                                            <action selector="startAnimating:" destination="vXZ-lx-hvc" eventType="primaryActionTriggered" id="3VR-n4-WjF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEs-2p-7JJ">
+                                        <rect key="frame" x="197" y="0.0" width="142" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Stop Animating"/>
+                                        <connections>
+                                            <action selector="stopAnimating:" destination="vXZ-lx-hvc" eventType="primaryActionTriggered" id="ZMc-gR-YrH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wey-r5-6m7"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,8 +66,10 @@
                             <constraint firstItem="Zdi-gx-sxs" firstAttribute="leading" secondItem="wey-r5-6m7" secondAttribute="leading" constant="16" id="UMK-oN-vCG"/>
                             <constraint firstItem="wey-r5-6m7" firstAttribute="trailing" secondItem="Zdi-gx-sxs" secondAttribute="trailing" constant="16" id="UWm-rr-0S8"/>
                             <constraint firstItem="cHQ-nR-0Ei" firstAttribute="centerX" secondItem="wey-r5-6m7" secondAttribute="centerX" id="WJQ-MI-LyC"/>
+                            <constraint firstItem="J23-4n-jVW" firstAttribute="centerX" secondItem="wey-r5-6m7" secondAttribute="centerX" id="WNP-1T-ocr"/>
                             <constraint firstItem="cHQ-nR-0Ei" firstAttribute="top" secondItem="O2C-E0-Keu" secondAttribute="bottom" constant="67.5" id="ZvJ-kd-fYZ"/>
                             <constraint firstItem="O2C-E0-Keu" firstAttribute="centerY" secondItem="wey-r5-6m7" secondAttribute="centerY" id="gzE-E3-pJw"/>
+                            <constraint firstItem="wey-r5-6m7" firstAttribute="bottom" secondItem="J23-4n-jVW" secondAttribute="bottom" constant="124.5" id="lgU-Wo-ccn"/>
                             <constraint firstItem="wey-r5-6m7" firstAttribute="trailing" secondItem="cHQ-nR-0Ei" secondAttribute="trailing" constant="16" id="s1f-AB-5C6"/>
                             <constraint firstItem="O2C-E0-Keu" firstAttribute="leading" secondItem="wey-r5-6m7" secondAttribute="leading" constant="16" id="tI0-5S-EsW"/>
                             <constraint firstItem="cHQ-nR-0Ei" firstAttribute="leading" secondItem="wey-r5-6m7" secondAttribute="leading" constant="16" id="vgF-bJ-vjj"/>

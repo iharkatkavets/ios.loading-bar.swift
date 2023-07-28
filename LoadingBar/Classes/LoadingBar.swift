@@ -55,14 +55,14 @@ public final class LoadingBar: UIView {
     private let templateImageWidth: CGFloat = 60
     private var offset: CGFloat = 0
     private var templateImage: CGImage? = nil
-    private var templateShapeColor = UIColor.systemPink {
+    public var stripColor0 = UIColor.systemPink {
         didSet {
-            templateImage = imageBuilder.withShapeColor(templateShapeColor).build()
+            templateImage = imageBuilder.withStripColor0(stripColor0).build()
         }
     }
-    private var templateBackgroundColor = UIColor.yellow {
+    public var stripColor1 = UIColor.yellow {
         didSet {
-            templateImage = imageBuilder.withShapeColor(templateShapeColor).build()
+            templateImage = imageBuilder.withStripColor0(stripColor0).build()
         }
     }
     let scale = UIScreen.main.scale
@@ -99,8 +99,8 @@ public final class LoadingBar: UIView {
         templateImage = imageBuilder
             .withSize(size)
             .withScale(scale)
-            .withBackgroundColor(templateBackgroundColor)
-            .withShapeColor(templateShapeColor)
+            .withStripColor0(stripColor0)
+            .withStripColor1(stripColor1)
             .build()
     }
     
@@ -130,5 +130,13 @@ public final class LoadingBar: UIView {
             progressView.backgroundColor = UIColor(patternImage: UIImage(cgImage: image,scale: scale,orientation: .up))
         }
         offset -= 1
+    }
+    
+    public func startAnimating() {
+        runDisplayLink()
+    }
+    
+    public func stopAnimating() {
+        stopDisplayLink()
     }
 }
