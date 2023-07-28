@@ -1,0 +1,16 @@
+PODS:
+  - LoadingBar (0.0.1)
+
+DEPENDENCIES:
+  - LoadingBar (from `../`)
+
+EXTERNAL SOURCES:
+  LoadingBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LoadingBar: 879d29e34b49f4b3bcfc0f1f3ba6ff13046d1259
+
+PODFILE CHECKSUM: 9593317f414e602fbe0e107d7141c51a33376260
+
+COCOAPODS: 1.12.1
