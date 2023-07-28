@@ -1,9 +1,6 @@
 # LoadingBar
 
-[![CI Status](https://img.shields.io/travis/Ihar Katkavets/LoadingBar.svg?style=flat)](https://travis-ci.org/Ihar Katkavets/LoadingBar)
-[![Version](https://img.shields.io/cocoapods/v/LoadingBar.svg?style=flat)](https://cocoapods.org/pods/LoadingBar)
-[![License](https://img.shields.io/cocoapods/l/LoadingBar.svg?style=flat)](https://cocoapods.org/pods/LoadingBar)
-[![Platform](https://img.shields.io/cocoapods/p/LoadingBar.svg?style=flat)](https://cocoapods.org/pods/LoadingBar)
+![](https://github.com/iharkatkavets/ios.loading-bar.swift/blob/main/demo.gif)
 
 ## Example
 
