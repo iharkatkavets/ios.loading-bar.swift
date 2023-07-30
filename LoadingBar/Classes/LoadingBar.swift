@@ -55,12 +55,12 @@ private final class ProgressView: UIView {
     private let templateImageWidth: CGFloat = 60
     private var offset: CGFloat = 0
     private var templateImage: CGImage? = nil
-    @IBInspectable public var stripColor0: UIColor? = UIColor.systemPink {
+    @IBInspectable @objc public dynamic var stripColor0: UIColor? = UIColor.systemPink {
         didSet {
             templateImage = imageBuilder.withStripColor0(stripColor0).build()
         }
     }
-    @IBInspectable public var stripColor1: UIColor? = UIColor.yellow {
+    @IBInspectable @objc public dynamic var stripColor1: UIColor? = UIColor.yellow {
         didSet {
             templateImage = imageBuilder.withStripColor0(stripColor0).build()
         }
