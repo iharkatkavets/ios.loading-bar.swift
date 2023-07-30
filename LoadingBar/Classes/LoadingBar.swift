@@ -42,7 +42,7 @@ private final class ProgressView: UIView {
     }
 }
 
-public final class LoadingBar: UIView {
+@IBDesignable public final class LoadingBar: UIView {
     private lazy var progressView: ProgressView = {
         let view  = ProgressView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -55,18 +55,18 @@ public final class LoadingBar: UIView {
     private let templateImageWidth: CGFloat = 60
     private var offset: CGFloat = 0
     private var templateImage: CGImage? = nil
-    public var stripColor0 = UIColor.systemPink {
+    @IBInspectable public var stripColor0: UIColor? = UIColor.systemPink {
         didSet {
             templateImage = imageBuilder.withStripColor0(stripColor0).build()
         }
     }
-    public var stripColor1 = UIColor.yellow {
+    @IBInspectable public var stripColor1: UIColor? = UIColor.yellow {
         didSet {
             templateImage = imageBuilder.withStripColor0(stripColor0).build()
         }
     }
     let scale = UIScreen.main.scale
-    public var progress: CGFloat = 1 {
+    @IBInspectable public var progress: CGFloat = 1 {
         didSet {
             progressView.progress = progress
         }
